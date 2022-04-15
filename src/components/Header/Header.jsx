@@ -1,5 +1,6 @@
-import { ReactComponent as Logo } from '../assets/logo.svg';
-import { ReactComponent as SearchIcon } from '../assets/search.svg';
+import { ReactComponent as Logo } from '../../assets/logo.svg';
+import { ReactComponent as SearchIcon } from '../../assets/search.svg';
+import './header.css';
 
 function Header() {
   return (
@@ -25,7 +26,7 @@ function Header() {
         </div>
       </div>
       <div className="container header-main">
-        <Logo />
+        <Logo className="logo" />
         <nav className="links">
           <a href="#">Laptops</a>
           <a href="#">Desktop PCs</a>
@@ -43,7 +44,7 @@ function Header() {
             <img src="" alt="" />
           </button>
           <button className="avatar">
-            <img src="" alt="" />
+            <img src="https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg" alt="" />
           </button>
         </div>
       </div>

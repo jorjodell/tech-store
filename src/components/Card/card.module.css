@@ -1,0 +1,45 @@
+.card {
+  display: grid;
+  padding: 7px 24.5px 19px;
+}
+
+.status {
+  --text-color: #C94D3F;
+  font-size: 10px;
+  margin-bottom: 7px;
+  color: var(--text-color);
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 4px;
+  justify-content: start;
+  align-items: center;
+}
+
+.instock {
+  --text-color: #78A962;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.priceOld {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--color11);
+  text-decoration: line-through;
+}
