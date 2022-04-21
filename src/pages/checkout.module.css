@@ -1,0 +1,28 @@
+.form {
+  display: grid;
+  row-gap: 12px;
+  width: 30%;
+}
+
+.textField {
+  display: grid;
+}
+.textField > span {
+  display: inline-flex;
+  height: 38px;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.required > span:after {
+  content: "*";
+  margin-left: 4px;
+  color: var(--color9);
+}
+
+.textField input {
+  height: 50px;
+  padding-left: 17px;
+  font-size: 14px;
+}
