@@ -1,39 +1,100 @@
 {
-  "posts": [
+  "brands": [
+    { "id": 1, "title": "Lenovo", "logoImg": "" },
+    { "id": 2, "title": "Acer", "logoImg": "" },
+    { "id": 3, "title": "Asus", "logoImg": "" },
+    { "id": 4, "title": "Apple", "logoImg": "" },
+    { "id": 5, "title": "HP", "logoImg": "" }
+  ],
+  "colors": [
+    { "id": 1, "name": "black", "value": "#000000" },
+    { "id": 2, "name": "gold", "value": "#ffd700" },
+    { "id": 3, "name": "silver", "value": "#c0c0c0" }
+  ],
+  "products": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "LENOVO IDEAPAD 3 15IIL05",
+      "description": "IdeaPad 3 стоит, как обычный ноутбук для повседневного использования, однако это устройство способно на большее. Модели, оснащенные процессорами Intel® Core™ 10-го поколения, а также увеличенными объемами оперативной памяти и эффективными накопителями, превзойдут любые ваши ожидания. И в качестве бонуса — цифровая панель, с которой вы будете во всеоружии, если вам потребуется работать с электронными таблицами или рассчитать семейный бюджет.",
+      "image": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2205_1_6.png",
+      "available": true,
+      "price": 52990,
+      "sale": 20,
+      "brand": 1,
+      "color": 1,
+      "rating": 0
     },
     {
       "id": 2,
-      "title": "json-server 2",
-      "author": "typicode 2"
+      "title": "ASUS TUF GAMING F15 FX506LH I5165SGN",
+      "description": "Внутри металлического корпуса скрыты мощные возможности: новейший процессор Intel® Core™ i7 11-го поколения1, видеокарта NVIDIA® GeForce RTX™ 30601, модуль памяти DDR4 3200 МГц емкостью до 24 ГБ и быстрый твердотельный накопитель PCIe емкостью до 1 ТБ.",
+      "image": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2154_0_1.jpg",
+      "available": true,
+      "price": 85990,
+      "sale": 8,
+      "brand": 3,
+      "color": 1,
+      "rating": 0
     },
     {
-      "author": "new author",
-      "title": "some title",
-      "id": 3
+      "id": 3,
+      "title": "ACER PREDATOR TRITON 300S PT314-51S-52X6",
+      "description": "Внутри металлического корпуса скрыты мощные возможности: новейший процессор Intel® Core™ i7 11-го поколения1, видеокарта NVIDIA® GeForce RTX™ 30601, модуль памяти DDR4 3200 МГц емкостью до 24 ГБ и быстрый твердотельный накопитель PCIe емкостью до 1 ТБ.",
+      "image": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2231_4_1.jpg",
+      "available": false,
+      "price": 129990,
+      "sale": 10,
+      "brand": 2,
+      "color": 3,
+      "rating": 0
     },
     {
-      "author": "test",
-      "title": "test title",
-      "id": 4
+      "id": 4,
+      "title": "APPLE MACBOOK PRO 14″ M1 PRO/16GB/1TB SSD SILVER",
+      "description": "Чип Apple M1 Pro или M1 Max: грандиозное расширение вычислительных и графических возможностей компьютера, ускорение операций машинного обучения",
+      "image": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2450_11_1_320.webp",
+      "available": false,
+      "price": 234900,
+      "sale": 0,
+      "brand": 4,
+      "color": 3,
+      "rating": 0
     },
     {
-      "author": "Michael",
-      "title": "Text some",
-      "id": 5
+      "id": 5,
+      "title": "HP PAVILION 14-EC0002UR",
+      "description": "Успевайте больше и перемещайтесь легко с 14-дюймовым ноутбуком HP Pavilion. Данный ноутбук с процессором AMD способен решать любые ваши задачи. Испытайте новые ощущения от развлечений благодаря насыщенному звуку динамиков, настроенных экспертами B&O, и великолепному изображению без мерцания на экране с узкими рамками.",
+      "image": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2387_5_1.jpg",
+      "available": true,
+      "price": 79990,
+      "sale": 15,
+      "brand": 5,
+      "color": 1,
+      "rating": 0
+    },
+    {
+      "id": 6,
+      "title": "HP ENVY 13-BA1015UR",
+      "description": "За высокую производительность отвечают мощный четырёхъядерный процессор Intel Core i5 1135g7, 8 Гб оперативной памяти и современный SSD-накопитель. У вас не возникнет задержек с открытием программ и сохранением информации, а графические приложения и ресурсоёмкие игры будут работать без торможений и лагов.",
+      "image": "https://object.pscloud.io/cms/cms/Photo/img_0_62_2461_0_1.jpg",
+      "available": true,
+      "price": 91990,
+      "sale": 25,
+      "brand": 5,
+      "color": 2,
+      "rating": 0
+    },
+    {
+      "id": 7,
+      "title": "LENOVO IDEAPAD 3 I381TMW",
+      "description": "Ищете производительный ноутбук начального уровня, который поможет вам справляться с повседневными задачами? Встречайте 15,6-дюймовый ноутбук Lenovo IdeaPad 3. Оснащенный передовым процессором Intel® Core™  и дискретной видеокартой (в максимальной комплектации), он обеспечивает высокий уровень производительности, поддерживает работу в режиме многозадачности и предоставляет широкие мультимедийные возможности. Финальный штрих к образу этого устройства — продуманные детали, такие как защитная шторка для веб-камеры.",
+      "image": "https://object.pscloud.io/cms/cms/Photo/img_0_62_1913_1_6.png",
+      "available": true,
+      "price": 55990,
+      "sale": 15,
+      "brand": 1,
+      "color": 3,
+      "rating": 0
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

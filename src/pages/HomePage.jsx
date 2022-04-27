@@ -12,7 +12,7 @@ function HomePage() {
   }
 
   useEffect(() => {
-    getPosts()
+    // getPosts()
   }, []);
   
   const addPost = async () => {
