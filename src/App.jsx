@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import CategoryPage from './pages/CategoryPage/CategoryPage';
 import ProductPage from './pages/ProductPage/ProductPage';
 import CheckoutPage from './pages/CheckoutPage';
+import CartPage from './pages/CartPage/CartPage';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -43,6 +44,7 @@ function App() {
           <Route path="/category/:name" element={<CategoryPage />} />
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       </StoreContext.Provider>
     </div>

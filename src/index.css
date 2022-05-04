@@ -5,11 +5,14 @@
 }
 
 :root {
+  --primary: #0156FF;
   --color5: #8C8C8C;
   --color6: #CCCCCC;
+  --color8: #000000;
   --color9: #C94D3F;
   --color11: #666666;
   --header-top-bg: #020202;
+  --page-top-padding: 21px;
 }
 
 body {
@@ -44,4 +47,36 @@ img {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 12px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.btn {
+  display: grid;
+  height: 50px;
+  border-radius: 25px;
+  justify-items: center;
+  align-items: center;
+  min-width: 151px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+.btn--outline {
+  background: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+@media (max-width: 412px) {
+  .container {
+    width: 100%;
+    padding: 16px;
+  }
 }
