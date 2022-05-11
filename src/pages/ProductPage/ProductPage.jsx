@@ -3,7 +3,7 @@ import Card from '../../components/Card/Card';
 import { useStore } from '../../store/context';
 
 function ProductPage() {
-  const { products } = useStore();
+  const { products, addToCart } = useStore();
 
   const { id } = useParams();
   const currentProduct = products.find((product) => product.id === +id);
@@ -11,16 +11,18 @@ function ProductPage() {
   return (
     <div>
       {currentProduct && (
-        <Card
-          title={currentProduct.title}
-          image={currentProduct.image}
-          isInStock={currentProduct.available}
-          priceOld={currentProduct.price}
-          price={
-            currentProduct.price -
-            (currentProduct.price / 100) * currentProduct.sale
-          }
-        />
+        <button onClick={() => addToCart(currentProduct)}>
+          <Card
+            title={currentProduct.title}
+            image={currentProduct.image}
+            isInStock={currentProduct.available}
+            priceOld={currentProduct.price}
+            price={
+              currentProduct.price -
+              (currentProduct.price / 100) * currentProduct.sale
+            }
+          />
+        </button>
       )}
     </div>
   );

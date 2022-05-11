@@ -29,7 +29,7 @@ function Card({ isInStock, title, priceOld, price, image }) {
       <div className="review"></div>
       <h1 className={css.title}>{title}</h1>
       <p className={css.priceOld}>{priceOld}.00 $</p>
-      <p className={css.price}>{price}.00 $</p>
+      <p className={css.price}>{price}.00 с</p>
     </article>
   );
 }

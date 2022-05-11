@@ -1,19 +1,23 @@
 import { Link } from 'react-router-dom';
+import clsx from 'clsx';
+import { useStore } from '../../store/context';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { ReactComponent as SearchIcon } from '../../assets/search.svg';
-import './header.css';
+import {ReactComponent as CartIcon } from '../../assets/cart.svg';
+import css from './header.module.css';
 
 function Header() {
+  const { cart } = useStore();
   return (
-    <header className="header">
-      <div className="header-top">
-        <div className="container header-top__content">
-          <div className="header-top__schedule">Mon-Thu: 9:00 AM - 5:30 PM</div>
-          <p className="header-top__address">
+    <header className={css.header}>
+      <div className={css.top}>
+        <div className={css.topContent}>
+          <div className={css.topSchedule}>Mon-Thu: 9:00 AM - 5:30 PM</div>
+          <p className={css.topAddress}>
             Visit our showroom in 1234 Street Adress City Address, 1234{' '}
             <a href="#">Contact Us</a>
           </p>
-          <div className="header-top__contacts">
+          <div className={css.topContacts}>
             <div className="header-top__phone">
               Call Us: <a href="tel:0012345678">(00) 1234 5678</a>
             </div>
@@ -26,7 +30,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="container header-main">
+      <div className={clsx('container', css.main)}>
         <Link to="/">
           <Logo className="logo" />
         </Link>
@@ -39,14 +43,14 @@ function Header() {
           <Link to="/repairs">Repairs</Link>
           <Link to="/our-deals">Our Deals</Link>
         </nav>
-        <div className="actions">
+        <div className={css.actions}>
           <button className="btn">
             <SearchIcon />
           </button>
-          <button className="btn">
-            <img src="" alt="" />
-          </button>
-          <button className="avatar">
+          <Link to="/cart" data-count={cart.length} className={clsx("btn--icon", css.cartBtn)}>
+            <CartIcon />
+          </Link>
+          <button className={css.avatar}>
             <img src="https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg" alt="" />
           </button>
         </div>

@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 import Collapse from '../../components/Collapse/Collapse';
+import { useStore } from '../../store/context';
 import css from './card-page.module.css';
 
 const CardPage = () => {
+  const { cart, changeProductQty } = useStore();
   const links = ['Home', 'Category', 'Cart'];
   return (
     <div className={clsx('container', css.page)}>
@@ -14,9 +16,7 @@ const CardPage = () => {
           </>
         ))}
       </div>
-      <h1 className={clsx("page-title", css.title)}>
-        Shopping Cart
-      </h1>
+      <h1 className={clsx('page-title', css.title)}>Shopping Cart</h1>
       <div className={css.content}>
         <div className={css.cart}>
           <div className={clsx(css.cartHead, css.cartRow)}>
@@ -25,55 +25,22 @@ const CardPage = () => {
             <p>Qty</p>
             <p>Subtotal</p>
           </div>
-          <div className={clsx(css.cartItem, css.cartRow)}>
-            <div>
-              <img src="" alt="" />
-              <p>
-                MSI MEG Trident X 10SD-1012AU Intel i7 10700K, 2070 SUPER, 32GB
-                RAM, 1TB SSD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years
-                Warranty
-              </p>
+          {cart.map((product) => (
+            <div key={product.id} className={clsx(css.cartItem, css.cartRow)}>
+              <div className={css.product}>
+                <img src={product.image} alt="" />
+                <p>{product.title}</p>
+              </div>
+              <p>{product.price.toFixed(2)}</p>
+              <input
+                type="number"
+                defaultValue={product.quantity}
+                onChange={(e) => changeProductQty(product.id, e.target.value)}
+              />
+              <p>{(product.price * product.quantity).toFixed(2)}</p>
+              <div>x</div>
             </div>
-            <p>$4,349.00</p>
-            <input type="number" />
-            <p>$13,047.00</p>
-            <div>x</div>
-          </div>
-          <div className={clsx(css.cartItem, css.cartRow)}>
-            <div>
-              <img src="" alt="" />
-              <p>
-                MSI MEG Trident X 10SD-1012AU Intel i7 10700K, 2070 SUPER, 32GB
-                RAM, 1TB SSD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years
-                Warranty
-              </p>
-            </div>
-            <p>$4,349.00</p>
-            <input type="number" />
-            <p>$13,047.00</p>
-            <div>x</div>
-          </div>
-          <div className={clsx(css.cartItem, css.cartRow)}>
-            <div>
-              <img src="" alt="" />
-              <p>
-                MSI MEG Trident X 10SD-1012AU Intel i7 10700K, 2070 SUPER, 32GB
-                RAM, 1TB SSD, Windows 10 Home, Gaming Keyboard and Mouse 3 Years
-                Warranty
-              </p>
-            </div>
-            <p>$4,349.00</p>
-            <input type="number" />
-            <p>$13,047.00</p>
-            <div>x</div>
-          </div>
-          <div className={css.cartActions}>
-            <button className={clsx("btn btn--outline", css.cartBtnOutline)}>
-              Continue Shopping
-            </button>
-            <button className={clsx("btn", css.cartBtn)}>Clear Shopping Cart</button>
-            <button className={clsx("btn", css.cartBtn)}>Update Shopping Cart</button>
-          </div>
+          ))}
         </div>
         <div className={css.summary}>
           <Collapse title="Estimate Shipping and Tax">

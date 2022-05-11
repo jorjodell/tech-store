@@ -44,6 +44,22 @@
   font-weight: 600;
 }
 
+.product {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 29px;
+} 
+.product img {
+  height: 120px;
+  width: 120px;
+  object-fit: contain;
+}
+
+.cartItem input[type=number] {
+  height: 50px;
+  padding-left: 12px;
+}
+
 .cartActions {
   display: grid;
   grid-template-columns: auto auto 1fr;

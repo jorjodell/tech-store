@@ -6,7 +6,6 @@ import { useStore } from '../../store/context';
 import Card from '../../components/Card/Card';
 import css from './category-page.module.css';
 
-
 function CategoryPage() {
   const [selectedColor, setSelectedColor] = useState();
   const { products, setProducts, colors } = useStore();
