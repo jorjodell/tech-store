@@ -46,6 +46,10 @@
   justify-content: start;
 }
 
+.active {
+  color: blue;
+}
+
 .actions {
   display: grid;
   grid-template-columns: repeat(3, auto);

@@ -8,6 +8,7 @@
   --primary: #0156FF;
   --color5: #8C8C8C;
   --color6: #CCCCCC;
+  --color7: #EBEBEB;
   --color8: #000000;
   --color9: #C94D3F;
   --color11: #666666;
@@ -27,10 +28,9 @@ a {
   text-decoration: none;
 }
 
-button {
+button, input {
   font-family: inherit;
   border: 0;
-  cursor: pointer;
   background: none;
 }
 

@@ -1,0 +1,23 @@
+.search {
+  margin-right: 25px;
+  position: relative;
+}
+
+.input {
+  height: 60px;
+  width: 100%;
+  padding: 0 30px;
+  background: var(--color7);
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+
+
+.list {
+  position: absolute;
+  background: white;
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 1px 4px 10px rgba(0,0,0, .2);
+}
