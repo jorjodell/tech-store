@@ -4,15 +4,18 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState: {
     loading: false,
-    data: []
+    data: JSON.parse(localStorage.getItem('cart')) ?? []
   },
   reducers: {
     addProduct(state, action) {
+
+    },
+    removeProduct(state, action) {
 
     }
   }
 })
 
-export const { addProduct }  = cartSlice.actions;
+export const { addProduct, removeProduct }  = cartSlice.actions;
 
 export default cartSlice.reducer;

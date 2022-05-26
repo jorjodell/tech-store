@@ -4,15 +4,20 @@ const productsSlice = createSlice({
   name: 'products',
   initialState: {
     loading: false,
-    data: []
+    data: [],
+    colors: [],
+    brands: [],
   },
   reducers: {
-    addProduct(state, action) {
-
+    addAllProducts(state, action) {
+      state.data = action.payload;
+    },
+    addColors(state, action) {
+      state.colors = action.payload;
     }
   }
 })
 
-export const { addProduct}  = productsSlice.actions;
+export const { addAllProducts, addColors }  = productsSlice.actions;
 
 export default productsSlice.reducer;
