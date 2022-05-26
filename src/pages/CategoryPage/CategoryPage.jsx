@@ -1,29 +1,22 @@
 import clsx from 'clsx';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { useStore } from '../../store/context';
 import Card from '../../components/Card/Card';
 import css from './category-page.module.css';
+import { fetchProductsByFilter } from '../../store/products';
 
 function CategoryPage() {
   const [selectedColor, setSelectedColor] = useState();
-  const { products, setProducts, colors } = useStore();
+  const products = useSelector((state) => state.products.data);
+  const colors = useSelector((state) => state.products.colors);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const { data } = await axios.get(`http://localhost:3001/products`, {
-        params: { color: selectedColor },
-      });
-      setProducts(data);
-    };
-
     if (selectedColor) {
-      fetchProducts();
+      dispatch(fetchProductsByFilter(selectedColor))
     }
-  }, [selectedColor]);
-
-  console.log(products)
+  }, [selectedColor, dispatch]);
 
   return (
     <div className={clsx(css.category, 'container')}>
@@ -65,6 +58,30 @@ function CategoryPage() {
       </div>
     </div>
   );
+}
+
+function App() {
+  return (
+    <div>
+      <Category title="Text" count={5} />
+    </div>
+  )
+}
+
+
+function Category({ title, count }) {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <Filter count={count} />
+    </div>
+  )
+}
+
+function Filter({ count }) {
+  return <div>
+
+  </div>
 }
 
 export default CategoryPage;

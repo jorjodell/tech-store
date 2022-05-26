@@ -1,16 +1,17 @@
 import { Link, useNavigate, Navigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 import clsx from 'clsx';
 import Cookies from 'js-cookie'
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { useStore } from '../../store/context';
 import css from './register-page.module.css';
+import { saveUser } from '../../store/user';
 
 const RegisterPage = () => {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-  const { setUser } = useStore();
+  const dispatch = useDispatch();
 
   if(Cookies.get('token')) {
     return <Navigate to="/" replace />
@@ -22,7 +23,7 @@ const RegisterPage = () => {
       const { data } = await axios.post('http://localhost:3001/register', body)
       const { accessToken, user } = data;
       Cookies.set('token', accessToken);
-      setUser(user);
+      dispatch(saveUser(user))
       navigate('/', { replace: true });
     } catch(error) {
       toast.error(error.response.data)

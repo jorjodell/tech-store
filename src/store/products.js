@@ -12,6 +12,16 @@ export const fetchProducts = createAsyncThunk(
     dispatch(addColors(resColors.data));
   })
 
+export const fetchProductsByFilter = createAsyncThunk(
+  'products/fetchProductsByFilter',
+  async (color, { dispatch }) => {
+    const { data } = await axios.get(`/products`, {
+      params: { color },
+    });
+    dispatch(addAllProducts(data))
+  },
+)
+
 const productsSlice = createSlice({
   name: 'products',
   initialState: {

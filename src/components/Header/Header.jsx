@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-import { useStore } from '../../store/context';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import { ReactComponent as SearchIcon } from '../../assets/search.svg';
 import { ReactComponent as CloseIcon } from '../../assets/close.svg';
@@ -10,7 +9,6 @@ import { useState } from 'react';
 import Search from '../Search';
 
 function Header() {
-  const { cart } = useStore();
   const [isSearch, setIsSearch] = useState(false);
   const [activeLink, setActiveLink] = useState('');
   const links = [
@@ -65,7 +63,7 @@ function Header() {
           </button>
           <Link
             to="/cart"
-            data-count={cart.length}
+            data-count={0}
             className={clsx('btn--icon', css.cartBtn)}
           >
             <CartIcon />

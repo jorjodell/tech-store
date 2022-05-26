@@ -1,10 +1,9 @@
 import clsx from 'clsx';
 import Collapse from '../../components/Collapse/Collapse';
-import { useStore } from '../../store/context';
 import css from './card-page.module.css';
 
 const CardPage = () => {
-  const { cart, changeProductQty } = useStore();
+  const cart = []
   const links = ['Home', 'Category', 'Cart'];
   return (
     <div className={clsx('container', css.page)}>
@@ -32,11 +31,11 @@ const CardPage = () => {
                 <p>{product.title}</p>
               </div>
               <p>{product.price.toFixed(2)}</p>
-              <input
+              {/* <input
                 type="number"
                 defaultValue={product.quantity}
                 onChange={(e) => changeProductQty(product.id, e.target.value)}
-              />
+              /> */}
               <p>{(product.price * product.quantity).toFixed(2)}</p>
               <div>x</div>
             </div>

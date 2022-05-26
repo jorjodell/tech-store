@@ -45,13 +45,13 @@ function App() {
   //   setCart(cart.filter((product) => product.id !== id));
   // };
 
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
+  // useEffect(() => {
+  //   localStorage.setItem('cart', JSON.stringify(cart));
+  // }, [cart]);
 
-  const PrivateRoute = ({ children }) => {
-    return Cookies.get('token') ? children : <Navigate to="/login" />;
-  };
+  // const PrivateRoute = ({ children }) => {
+  //   return Cookies.get('token') ? children : <Navigate to="/login" />;
+  // };
 
   return (
     <div className="App">
@@ -63,15 +63,15 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/category/:name" element={<CategoryPage />} />
         {/* <Route path="/product/:id" element={<ProductPage />} /> */}
-        <Route path="/checkout" element={<CheckoutPage />} />
-        <Route
+        {/* <Route path="/checkout" element={<CheckoutPage />} /> */}
+        {/* <Route
           path="/cart"
           element={
             <PrivateRoute>
               <CartPage />
             </PrivateRoute>
           }
-        />
+        /> */}
       </Routes>
       <ToastContainer />
     </div>
