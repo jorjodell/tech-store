@@ -1,15 +1,61 @@
 {
+  "users": [
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$uXxbhAWaUjeAC4sCVQavge2Fvdlej02E.f7ZRfPI52DapUrDH.6Ea",
+      "name": "Test Testov",
+      "id": 1
+    },
+    {
+      "email": "admin@qwe.qwe",
+      "password": "$2a$10$1yw.S619iBEw0LU5XdPwg.U./6ONU7meGU6Kv/cX51ofVEFtDjcMC",
+      "name": "new user",
+      "id": 2
+    }
+  ],
   "brands": [
-    { "id": 1, "title": "Lenovo", "logoImg": "" },
-    { "id": 2, "title": "Acer", "logoImg": "" },
-    { "id": 3, "title": "Asus", "logoImg": "" },
-    { "id": 4, "title": "Apple", "logoImg": "" },
-    { "id": 5, "title": "HP", "logoImg": "" }
+    {
+      "id": 1,
+      "title": "Lenovo",
+      "logoImg": ""
+    },
+    {
+      "id": 2,
+      "title": "Acer",
+      "logoImg": ""
+    },
+    {
+      "id": 3,
+      "title": "Asus",
+      "logoImg": ""
+    },
+    {
+      "id": 4,
+      "title": "Apple",
+      "logoImg": ""
+    },
+    {
+      "id": 5,
+      "title": "HP",
+      "logoImg": ""
+    }
   ],
   "colors": [
-    { "id": 1, "name": "black", "value": "#000000" },
-    { "id": 2, "name": "gold", "value": "#ffd700" },
-    { "id": 3, "name": "silver", "value": "#c0c0c0" }
+    {
+      "id": 1,
+      "name": "black",
+      "value": "#000000"
+    },
+    {
+      "id": 2,
+      "name": "gold",
+      "value": "#ffd700"
+    },
+    {
+      "id": 3,
+      "name": "silver",
+      "value": "#c0c0c0"
+    }
   ],
   "products": [
     {

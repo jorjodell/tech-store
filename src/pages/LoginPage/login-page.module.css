@@ -1,0 +1,21 @@
+.login h1 {
+  margin-bottom: 21px;
+}
+
+.login form {
+  display: grid;
+  row-gap: 20px;
+  width: 400px;
+}
+
+.login input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid grey;
+  padding-left: 17px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: max-content max-content;
+}
