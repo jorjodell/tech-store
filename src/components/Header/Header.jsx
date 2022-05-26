@@ -7,6 +7,8 @@ import { ReactComponent as CartIcon } from '../../assets/cart.svg';
 import css from './header.module.css';
 import { useState } from 'react';
 import Search from '../Search';
+import { useSelector } from 'react-redux';
+import { cartSelectors } from '../../store/cart';
 
 function Header() {
   const [isSearch, setIsSearch] = useState(false);
@@ -15,6 +17,7 @@ function Header() {
     {href: "/category/laptops", title: 'Laptops'},
     {href: "/category/desktops", title: 'Desktop PCs'},
   ]
+  const total = useSelector(cartSelectors.selectTotal);
 
   return (
     <header className={css.header}>
@@ -63,7 +66,7 @@ function Header() {
           </button>
           <Link
             to="/cart"
-            data-count={0}
+            data-count={total}
             className={clsx('btn--icon', css.cartBtn)}
           >
             <CartIcon />

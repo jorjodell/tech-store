@@ -1,9 +1,13 @@
 import clsx from 'clsx';
+import { useDispatch, useSelector } from 'react-redux';
 import Collapse from '../../components/Collapse/Collapse';
+import { cartSelectors, removeProduct } from '../../store/cart';
 import css from './card-page.module.css';
 
 const CardPage = () => {
-  const cart = []
+  const cart = useSelector(cartSelectors.selectAll);
+  const dispatch = useDispatch();
+
   const links = ['Home', 'Category', 'Cart'];
   return (
     <div className={clsx('container', css.page)}>
@@ -37,7 +41,7 @@ const CardPage = () => {
                 onChange={(e) => changeProductQty(product.id, e.target.value)}
               /> */}
               <p>{(product.price * product.quantity).toFixed(2)}</p>
-              <div>x</div>
+              <button onClick={() => dispatch(removeProduct(product.id))}>x</button>
             </div>
           ))}
         </div>

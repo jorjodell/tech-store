@@ -6,7 +6,7 @@ import Cookies from 'js-cookie';
 import Header from './components/Header/Header';
 import HomePage from './pages/HomePage';
 import CategoryPage from './pages/CategoryPage';
-// import ProductPage from './pages/ProductPage';
+import ProductPage from './pages/ProductPage/ProductPage';
 import CheckoutPage from './pages/CheckoutPage/index';
 import CartPage from './pages/CartPage';
 import LoginPage from './pages/LoginPage';
@@ -49,9 +49,9 @@ function App() {
   //   localStorage.setItem('cart', JSON.stringify(cart));
   // }, [cart]);
 
-  // const PrivateRoute = ({ children }) => {
-  //   return Cookies.get('token') ? children : <Navigate to="/login" />;
-  // };
+  const PrivateRoute = ({ children }) => {
+    return Cookies.get('token') ? children : <Navigate to="/login" />;
+  };
 
   return (
     <div className="App">
@@ -62,16 +62,16 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/category/:name" element={<CategoryPage />} />
-        {/* <Route path="/product/:id" element={<ProductPage />} /> */}
+        <Route path="/product/:id" element={<ProductPage />} />
         {/* <Route path="/checkout" element={<CheckoutPage />} /> */}
-        {/* <Route
+        <Route
           path="/cart"
           element={
             <PrivateRoute>
               <CartPage />
             </PrivateRoute>
           }
-        /> */}
+        />
       </Routes>
       <ToastContainer />
     </div>

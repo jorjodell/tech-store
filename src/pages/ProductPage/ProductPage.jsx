@@ -1,17 +1,19 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Card from '../../components/Card/Card';
-import { useStore } from '../../store/context';
+import { addProduct } from '../../store/cart';
 
 function ProductPage() {
-  const { products, addToCart } = useStore();
-
   const { id } = useParams();
+  const dispatch = useDispatch();
+
+  const products = useSelector((state) => state.products.data)
   const currentProduct = products.find((product) => product.id === +id);
 
   return (
     <div>
       {currentProduct && (
-        <button onClick={() => addToCart(currentProduct)}>
+        <button onClick={() => dispatch(addProduct(currentProduct))}>
           <Card
             title={currentProduct.title}
             image={currentProduct.image}
