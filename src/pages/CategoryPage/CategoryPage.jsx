@@ -60,28 +60,4 @@ function CategoryPage() {
   );
 }
 
-function App() {
-  return (
-    <div>
-      <Category title="Text" count={5} />
-    </div>
-  )
-}
-
-
-function Category({ title, count }) {
-  return (
-    <div>
-      <h1>{title}</h1>
-      <Filter count={count} />
-    </div>
-  )
-}
-
-function Filter({ count }) {
-  return <div>
-
-  </div>
-}
-
 export default CategoryPage;

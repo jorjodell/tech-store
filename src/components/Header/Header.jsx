@@ -26,7 +26,7 @@ function Header() {
           <div className={css.topSchedule}>Mon-Thu: 9:00 AM - 5:30 PM</div>
           <p className={css.topAddress}>
             Visit our showroom in 1234 Street Adress City Address, 1234{' '}
-            <a href="#">Contact Us</a>
+            <a href="#contacts">Contact Us</a>
           </p>
           <div className={css.topContacts}>
             <div className="header-top__phone">
