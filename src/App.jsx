@@ -7,7 +7,6 @@ import Header from './components/Header/Header';
 import HomePage from './pages/HomePage';
 import CategoryPage from './pages/CategoryPage';
 import ProductPage from './pages/ProductPage/ProductPage';
-import CheckoutPage from './pages/CheckoutPage/index';
 import CartPage from './pages/CartPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';

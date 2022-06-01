@@ -1,5 +1,4 @@
-import { createSlice, createEntityAdapter, createDraftSafeSelector } from '@reduxjs/toolkit';
-import { toast } from 'react-toastify';
+import { createSlice, createEntityAdapter } from '@reduxjs/toolkit';
 
 const cartAdapter = createEntityAdapter();
 
